@@ -1,0 +1,4 @@
+# Настройки сервера Apache
+Options +Indexes
+DirectoryIndex index.html
+AddDefaultCharset utf-8
