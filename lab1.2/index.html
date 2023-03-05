@@ -38,7 +38,9 @@
     абсолютные ссылки начинаются с ключевого слова <code>http://</code> 
     (пример&nbsp;1).</p>
   <p>Пример 1. Использование абсолютных ссылок</p>
- 
+
+  <title>Абсолютная ссылка</title>
+
      <p><a href=";http://www.yandex.ru">Поисковая система Яндекс</a></p>
      
   <p>Относительные ссылки, как следует из их названия, построены относительно 
@@ -65,17 +67,11 @@
     то она размещена внутри текущего каталога (пример&nbsp;2).</p>
   
   <p>Пример 2. Использование относительных ссылок</p>
-  <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang=&quot;ru&quot;&gt;
-   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Относительная ссылка&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-    &lt;p&gt;&lt;a href=&quot;images/xxx.jpg&quot;&gt;Посмотрите на мою фотографию!&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;tip.html&quot;&gt;Как сделать такое же фото?&lt;/a&gt;&lt;/p&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+  
+    <p><a href="images/xxx.jpg">Посмотрите на мою фотографию!</a></p>
+    <p><a href="tip.html">Как сделать такое же фото?</a></p>
+
+    
   
   <p>Иногда можно встретить в адресе ссылки путь в виде <code>./file/doc.html</code>. 
     Точка со слэшем (символ /) означает, что отсчет ведется от текущей папки. Подобная 
