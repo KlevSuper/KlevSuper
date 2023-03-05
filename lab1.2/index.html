@@ -145,18 +145,11 @@
   
     
   <p>Пример 6. Использование тега &lt;base&gt;</p>
-  <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang=&quot;ru&quot;&gt;
-   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Открытие файла во фрейме&lt;/title&gt;
-    &lt;base target=&quot;_blank&quot;&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-    &lt;p&gt;&lt;a href=&quot;1.html&quot;&gt;Ссылка откроется в новом окне&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;2.html&quot; target=&quot;_self&quot;&gt;Ссылка откроется в текущем окне&lt;/a&gt;&lt;/p&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+ 
+    <title>Открытие файла во фрейме</title>
+    <base target="_blank">
+    <p><a href="1.html">Ссылка откроется в новом окне</a></p>
+    <p><a href="2.html" target="_self">Ссылка откроется в текущем окне</a></p>
   
   <p>Сделать так, чтобы ссылка открывалась в текущем окне, в таком случае можно, 
     если добавить к тегу <code>&lt;a&gt;</code> атрибут <code>target=&quot;_self&quot;</code>, 
