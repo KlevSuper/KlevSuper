@@ -138,8 +138,8 @@
     в новом окне.</p>
     
   <p>Если на веб-странице необходимо сделать, чтобы все ссылки открывались в новом 
-    окне,  нет необходимости добавлять во все теги <code><a></code> <code>target=&quot;_blank&quot;</code>. Код можно сократить, 
-    если вначале страницы добавить строку <code><base target=&quot;_blank&quot;></code>, 
+    окне,  нет необходимости добавлять во все теги <code><a></code> <code>target="_blank"</code>. Код можно сократить, 
+    если вначале страницы добавить строку <code><base target="_blank"></code>, 
     как показано в примере&nbsp;6</p>
   
     
@@ -151,7 +151,7 @@
     <p><a href="2.html" target="_self">Ссылка откроется в текущем окне</a></p>
   
   <p>Сделать так, чтобы ссылка открывалась в текущем окне, в таком случае можно, 
-    если добавить к тегу <code></code> атрибут <code>target=&quot;_self&quot;</code>, 
+    если добавить к тегу <code></code> атрибут <code>target="_self"</code>, 
   как показано в данном примере.</p>
   
   <hr>
@@ -179,9 +179,9 @@
     стилевое свойство <code>border</code> (пример&nbsp;8).</p>
   <p>Пример 8. Удаление рамки вокруг изображения</p>
   <pre><code><!DOCTYPE html>
-  <html lang=&quot;ru&quot;>
+  <html lang="ru">
    <head>
-    <meta charset=&quot;UTF-8&quot;>
+    <meta charset="UTF-8">
     <title>Ссылка</title>
     <style>
      a img {
@@ -190,8 +190,8 @@
     </style>
    </head>
    <body>
-     <p><a href=&quot;sample.html&quot;><img src=&quot;images/sample.gif&quot; width=&quot;50&quot; 
-     height=&quot;50&quot; alt=&quot;Пример&quot;></a></p>
+     <p><a href="sample.html"><img src="images/sample.gif" width="50" 
+     height="50" alt="Пример"></a></p>
    </body> 
   </html></code></pre>
   
@@ -207,15 +207,15 @@
   
   <p>Пример 9. Создание якоря</p>
   <pre><code><!DOCTYPE html>
-  <html lang=&quot;ru&quot;>
+  <html lang="ru">
    <head>
-    <meta charset=&quot;UTF-8&quot;>
+    <meta charset="UTF-8">
     <title>Быстрый переход внутри документа</title>
    </head>
    <body>
-    <p id=&quot;top&quot;></p>
+    <p id="top"></p>
     <p>...</p>
-    <p><a href=&quot;#top&quot;>Наверх</a></p>
+    <p><a href="#top">Наверх</a></p>
    </body>
   </html></code></pre>
   
@@ -234,13 +234,13 @@
   
   <p>Пример 10. Ссылка на закладку из другой веб-страницы</p>
   <pre><code><!DOCTYPE html>
-  <html lang=&quot;ru&quot;>
+  <html lang="ru">
    <head>
-    <meta charset=&quot;UTF-8&quot;>
+    <meta charset="UTF-8">
     <title>Якорь в другом документе</title>
    </head>
    <body>
-    <p><a href=&quot;https://ru.wikipedia.org/wiki/HTML5#HTML_5.1&quot;>HTML 5.1</a></p>
+    <p><a href="https://ru.wikipedia.org/wiki/HTML5#HTML_5.1">HTML 5.1</a></p>
    </body>
   </html></code></pre>
    
@@ -250,13 +250,13 @@
   
   <p>Пример 11. Пустые ссылки</p>
   <pre><code><!DOCTYPE html>
-  <html lang=&quot;ru&quot;>
+  <html lang="ru">
    <head>
-    <meta charset=&quot;UTF-8&quot;>
+    <meta charset="UTF-8">
     <title>#</title>
    </head>
    <body>
-    <p><a href=&quot;#&quot;>О нас</a></p>
+    <p><a href="#">О нас</a></p>
    </body>
   </html></code></pre>
   
