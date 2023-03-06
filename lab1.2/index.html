@@ -27,7 +27,7 @@
 <h2><a name="my_link_1">Как сделать ссылку</a></h2>
 <p>Для создания ссылки необходимо сообщить браузеру, что является 
   ссылкой, а также указать адрес документа, на который следует сделать 
-  ссылку. Оба действия выполняются с помощью тега <code>&lt;a&gt;</code>, 
+  ссылку. Оба действия выполняются с помощью тега <code><a></code>, 
   который имеет единственный обязательный атрибут <code>href</code>. 
   В качестве значения используется адрес документа (URL).</p>
   <p>Адрес ссылки может быть абсолютным и относительным. Абсолютные адреса работают 
@@ -79,7 +79,7 @@
   <hr>
   
   <h2><a name="my_link_2">Цвет ссылок</a></h2>
-  <p>Цвета ссылок задаются в качестве атрибутов тега <code>&lt;body&gt;</code>. 
+  <p>Цвета ссылок задаются в качестве атрибутов тега <code><body></code>. 
    Атрибуты являются необязательными и если они не указаны используются 
     значения по умолчанию.</p>
   <p><code>link</code> &#8212; определяет цвет ссылок на веб-странице 
@@ -108,7 +108,7 @@
 <h2><a name="my_link_3">Атрибут target</a></h2>
   <p>По умолчанию, при переходе по ссылке документ открывается в текущем окне или 
     фрейме. При необходимости, это условие может быть изменено атрибутом <code>target</code> 
-    тега <code>&lt;a&gt;</code>. Этот атрибут может принимать следующие 
+    тега <code><a></code>. Этот атрибут может принимать следующие 
   значения:</p>
   <p><code>_blank</code> &#8212; загружает страницу в новое окно браузера;  </p>
   
@@ -121,7 +121,7 @@
   <p>Пример 4. Открытие документа в новом окне</p>
 
    <p><a href="https://webref.ru" target="_blank">Ссылка открывает новое окно на сайт webref.ru</a></p>
-  <p>Для создания валидного кода атрибут <code>target</code> может  использоваться только при переходном <code>&lt;!DOCTYPE</code>&gt;, как показано во всех примерах этой статьи.</p>
+  <p>Для создания валидного кода атрибут <code>target</code> может  использоваться только при переходном <code><!DOCTYPE</code>>, как показано во всех примерах этой статьи.</p>
   <p>Если на сайте используются фреймы, то в качестве значения <code>target</code> можно использовать имя фрейма (пример&nbsp;5).</p>
   
   <p>Пример 5. Открытие документа во фрейме</p>
@@ -138,12 +138,12 @@
     в новом окне.</p>
     
   <p>Если на веб-странице необходимо сделать, чтобы все ссылки открывались в новом 
-    окне,  нет необходимости добавлять во все теги <code>&lt;a&gt;</code> <code>target=&quot;_blank&quot;</code>. Код можно сократить, 
-    если вначале страницы добавить строку <code>&lt;base target=&quot;_blank&quot;&gt;</code>, 
+    окне,  нет необходимости добавлять во все теги <code><a></code> <code>target=&quot;_blank&quot;</code>. Код можно сократить, 
+    если вначале страницы добавить строку <code><base target=&quot;_blank&quot;></code>, 
     как показано в примере&nbsp;6</p>
   
     
-  <p>Пример 6. Использование тега &lt;base&gt;</p>
+  <p>Пример 6. Использование тега >base></p>
  
     <title>Открытие файла во фрейме</title>
     <base target="_blank">
@@ -151,15 +151,15 @@
     <p><a href="2.html" target="_self">Ссылка откроется в текущем окне</a></p>
   
   <p>Сделать так, чтобы ссылка открывалась в текущем окне, в таком случае можно, 
-    если добавить к тегу <code>&lt;a&gt;</code> атрибут <code>target=&quot;_self&quot;</code>, 
+    если добавить к тегу <code>>a></code> атрибут <code>target=&quot;_self&quot;</code>, 
   как показано в данном примере.</p>
   
   <hr>
   
   <h2><a name="my_link_4">Изображение в качестве ссылки</a></h2>
   <p>Кроме текста, в качестве ссылок можно использовать и рисунки. Изображение в 
-    этом случае надо поместить между тегами <code>&lt;a&gt;</code> 
-    и <code>&lt;/a&gt;</code>, как показано в примере&nbsp;7.</p>
+    этом случае надо поместить между тегами <code><a></code> 
+    и <code></a></code>, как показано в примере&nbsp;7.</p>
   <p>Пример 7. Создание рисунка-ссылки</p>
   
     <title>Ссылка</title>
@@ -168,32 +168,32 @@
      height="50" alt="Пример"></a></p>
    
   
-    <p>Атрибут <code>href </code> тега <code>&lt;a&gt;</code> 
+    <p>Атрибут <code>href </code> тега <code><a></code> 
       задает путь к документу, на который указывает ссылка, а <code>src</code> 
-      тега <code>&lt;img&gt;</code> &#8212; путь к графическому файлу. 
+      тега <code><img></code> &#8212; путь к графическому файлу. 
     
     <p>Вокруг изображения-ссылки автоматически добавляется рамка толщиной один пиксел 
     и цветом, совпадающим с цветом текстовых ссылок. 
   
-  <p>Чтобы убрать рамку, следует для тега <code>&lt;img&gt;</code> использовать
+  <p>Чтобы убрать рамку, следует для тега <code><img></code> использовать
     стилевое свойство <code>border</code> (пример&nbsp;8).</p>
   <p>Пример 8. Удаление рамки вокруг изображения</p>
-  <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang=&quot;ru&quot;&gt;
-   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Ссылка&lt;/title&gt;
-    &lt;style&gt;
+  <pre><code><!DOCTYPE html>
+  <html lang=&quot;ru&quot;>
+   <head>
+    <meta charset=&quot;UTF-8&quot;>
+    <title>Ссылка</title>
+    <style>
      a img {
       border: none; /* Убираем рамку */
      }
-    &lt;/style&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-     &lt;p&gt;&lt;a href=&quot;sample.html&quot;&gt;&lt;img src=&quot;images/sample.gif&quot; width=&quot;50&quot; 
-     height=&quot;50&quot; alt=&quot;Пример&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-   &lt;/body&gt; 
-  &lt;/html&gt;</code></pre>
+    </style>
+   </head>
+   <body>
+     <p><a href=&quot;sample.html&quot;><img src=&quot;images/sample.gif&quot; width=&quot;50&quot; 
+     height=&quot;50&quot; alt=&quot;Пример&quot;></a></p>
+   </body> 
+  </html></code></pre>
   
   <hr>
   
@@ -206,18 +206,18 @@
   </p>
   
   <p>Пример 9. Создание якоря</p>
-  <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang=&quot;ru&quot;&gt;
-   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Быстрый переход внутри документа&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-    &lt;p id=&quot;top&quot;&gt;&lt;/p&gt;
-    &lt;p&gt;...&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;#top&quot;&gt;Наверх&lt;/a&gt;&lt;/p&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+  <pre><code><!DOCTYPE html>
+  <html lang=&quot;ru&quot;>
+   <head>
+    <meta charset=&quot;UTF-8&quot;>
+    <title>Быстрый переход внутри документа</title>
+   </head>
+   <body>
+    <p id=&quot;top&quot;></p>
+    <p>...</p>
+    <p><a href=&quot;#top&quot;>Наверх</a></p>
+   </body>
+  </html></code></pre>
   
   <p>
   Имя ссылки на якорь начинается с решётки (#), после чего идёт имя якоря, оно выбирается любое, соответствующее тематике. Главное, чтобы значения атрибутов <code>id</code> и <code>href</code> совпадали (символ решётки не в счёт).
@@ -229,36 +229,36 @@
   С якорями связана одна особенность работы браузера. После перехода к указанному якорю нажатие на кнопку «Назад» возвращает не на предыдущую просмотренную страницу, а к ссылке, с которой был сделан переход к якорю. Получается, что для перехода к предыдущему документу надо нажать кнопку «Назад» два раза.
   </p>
   <p>
-  Ссылку также можно сделать на якорь на другой веб-странице и даже на другом сайте. Для этого в атрибуте href элемента &lt;a&gt; надо указать полный адрес документа и в конце добавить символ решётки и имя якоря (пример&nbsp;10)
+  Ссылку также можно сделать на якорь на другой веб-странице и даже на другом сайте. Для этого в атрибуте href элемента <a> надо указать полный адрес документа и в конце добавить символ решётки и имя якоря (пример&nbsp;10)
   </p>
   
   <p>Пример 10. Ссылка на закладку из другой веб-страницы</p>
-  <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang=&quot;ru&quot;&gt;
-   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Якорь в другом документе&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-    &lt;p&gt;&lt;a href=&quot;https://ru.wikipedia.org/wiki/HTML5#HTML_5.1&quot;&gt;HTML 5.1&lt;/a&gt;&lt;/p&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+  <pre><code><!DOCTYPE html>
+  <html lang=&quot;ru&quot;>
+   <head>
+    <meta charset=&quot;UTF-8&quot;>
+    <title>Якорь в другом документе</title>
+   </head>
+   <body>
+    <p><a href=&quot;https://ru.wikipedia.org/wiki/HTML5#HTML_5.1&quot;>HTML 5.1</a></p>
+   </body>
+  </html></code></pre>
    
   <p>
   Если на веб-странице содержится ссылка на якорь, а самого якоря нет, то никакой ошибки не возникнет. По этой причине решётку часто используют для пустых ссылок, когда ссылка нужна, но адрес пока не известен (пример 11) или нажатие обрабатывается программой на JavaScript.
   </p>
   
   <p>Пример 11. Пустые ссылки</p>
-  <pre><code>&lt;!DOCTYPE html&gt;
-  &lt;html lang=&quot;ru&quot;&gt;
-   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;#&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;О нас&lt;/a&gt;&lt;/p&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+  <pre><code><!DOCTYPE html>
+  <html lang=&quot;ru&quot;>
+   <head>
+    <meta charset=&quot;UTF-8&quot;>
+    <title>#</title>
+   </head>
+   <body>
+    <p><a href=&quot;#&quot;>О нас</a></p>
+   </body>
+  </html></code></pre>
   
 </body>
 </html>
