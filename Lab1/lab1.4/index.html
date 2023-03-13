@@ -43,19 +43,28 @@
                 и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <code>source</code> 
                 найдено не будет, то будет выбран файл, указанный  атрибутом  <code>src</code> элемента <code>img</code>. 
                 Затем выбранное изображение отображается в пространстве, занятом элементом <code>img</code>. 
-                </p><br>
+                </p>
          
 
         <figure>
             <img src = "/images/aquaria.jpg" alt="Черепаха">
             <figcaption>Черепаха </figcaption>
             </figure>
-
-            
-        <figure>
-            <img src = "/images/globus.gif">
-            <figcaption> Глобус </figcaption>
+            <figure>
+             <img src = "/images/globus.gif" alt="Глобус">
+             <figcaption>Глобус </figcaption>
             </figure>
-            
+<pre>
+            <picture>
+                <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+                <img src="mdn-logo-narrow.png" alt="MDN">
+               </picture>
+</pre>
+               <picture>
+                <source media="(min-width: 650px)" srcset="/images/mushroom_landscape.jpg">
+                <source media="(min-width: 465px)" srcset="/images/mushroom_portrait.jpg">
+                <source media="(min-width: 465px)" srcset="/images/mushroom_retina.jpg">
+                <img src="/images/mushroom.jpg" alt="Грибочек" >
+              </picture>
 </body>
 </html>
