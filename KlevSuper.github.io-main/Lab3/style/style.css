@@ -1,0 +1,26 @@
+body {
+  text-align: right;
+  background: black;
+  color: white;
+}
+h1,h2 {
+  text-align: right;
+  color: red;
+  font-family: arial;
+}
+em {
+  color: green;
+}
+@media print {
+  em {
+  color: black;
+}
+  body {
+  background:none;
+    color: black;   
+}
+  h1, h2{
+    color: black;  
+  }
+title {display:none;}
+}
