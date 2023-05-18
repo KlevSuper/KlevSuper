@@ -1,21 +1,38 @@
 <!doctype html>
 <html lang="ru">
 <head>
+    <link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
 <meta charset="utf-8">
 <title>Главная страница</title>
 <link type="text/css" rel="stylesheet" href="css/main.css">
 <style>
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-#left1{
-    width: 300px;
-	background:rgb(218, 218, 233);
-    float: left;
-	}
-#left {
+ul {
+        list-style: none;
+    }
+    li:before {
+                    left: 25px;
+                    width: 4px;
+                    content: url(pic/plus.gif);
+                    height: 14px;
+                    width: 15px;
+                    position: absolute;
+			}
+    li a {
+        color: #5578A1;
+    }
+    #container {
+    width: 800px;
+    }
+    #header {
+ 
+    height: 80px;
+    background: #CCDDEE;
+    }
+    #outer {
+    height: 190px;
+    }
+
+    #left {
     width: 200px;
     height: 200px;
     margin: 0px 10px 10px 0;
@@ -32,12 +49,23 @@
     #center {
     margin: 11px 10px 0px 10px;
     }
+    #footer {
+    margin-top: 15px;
+    width: 800px;
+    height: 100px;
+    background: #DDCCEE;}
+    .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
 </style>
 </head>
 <body>
 <div id="container">
 	<div id="header"></div>
-	<div id="outer">
+	<div id="outer" class="clearfix">
 		<div id="inner">
 			<div id="left">
 				<ul>
