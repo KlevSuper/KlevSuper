@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
+<meta charset="utf-8">
+<title>Использование grid при построении колонок</title>
+<style>
+body{
+    display:grid;
+    grid-template-columns: [one] 200px [two] 600px [three] 200px;
+    grid-template-rows: 1fr;
+    column-gap: 10px; 
+}
+#left{
+	background:#ccf;
+    width: 200px;
+    grid-column-start: 1;
+    grid-column-end: two;      
+}
+#right{
+	background:#fcc;
+    width: 200px;
+    grid-column-start: three;
+    grid-column-end: 3;
+    grid-row-start: 1;       
+}
+#center{
+	background:#cfc;
+    width: 600px;
+    grid-column-start: two;
+    grid-column-end: three;   
+}
+</style>
+</head>
+<body>
+	<div id="left">left<br>left<br>left<br>left<br>left</div>
+	<div id="right">right<br>right<br>right<br>right</div>
+	<div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+</body>
+</html>
