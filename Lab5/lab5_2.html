@@ -1,28 +1,33 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
+	<link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
 <meta charset="utf-8">
 <title>Использование float при построении колонок</title>
-<style type="text/css">
-#left{
-	width: 200px;
-	float:left;
+<style>
+	div{
+	display: block;
+  	float: left;
+	}
+	#left{
+	float: left;
 	background:#ccf;
+  	width: 200px;
+  	margin-right: 15px;
 }
-#right{
-	width: 200px;
-	float:right;
+	#right{
+	float: right;
 	background:#fcc;
-}
-#center{
+  	width: 200px;
+  	margin-left: 15px;
 
+}
+	#center{
+  	width: -webkit-calc(100% - 200px - 200px - 15px - 15px);
+  	width: -moz-calc(100% - 200px - 200px - 15px - 15px);
+  	width: calc(100% - 200px - 200px - 15px - 15px);
 	background:#cfc;
-	clear:both;
 }
-div {
-    margin: 10px;
-    }
-
 </style>
 </head>
 <body>
