@@ -2,23 +2,32 @@
 <html lang="ru">
 <head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="/Lab4/css/font-awesome.min.css">
+		<link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
+		<link rel="stylesheet" href="Awesome/css/font-awesome.min.css" type="text/css">
 		<title>Awesome меню</title>
 		<style>
+            .menu ul li:hover:before {
+                    content: "\f056";
+            }
+       
+    		.menu  ul li:hover  li {
+					display:block;
+			}
+            .menu li li:hover:before {
+                    content: "\f192";			
+			}
             .menu li li:before {
                     font-family: FontAwesome;
                     content: "\f192";
                     background-position: 0px -16px;
                     left: 20px;
-                    margin-left: -20px;
-					
+                    margin-left: -20px;	
 			}
             .menu li:before {
-
                     left: 22px;
                     width: 4px;
                     font-family: FontAwesome;
-                    content: "\f146";
+                    content: "\f055";
                     height: 14px;
                     width: 15px;
                     position: absolute;
@@ -36,7 +45,6 @@
 			.menu ul {
                     position:relative;
                     list-style: none;
-				
 			}
 			.menu li {
                     list-style:none;
@@ -49,21 +57,13 @@
 					
 			}
 			
-			
 			.menu li ul {
                     margin-bottom: 12px;
 					
 			}
-			
-
 			.menu li li { 
                     margin-left: -20px;
 					    display: none;
-			}
-
-
-    		.menu  ul li:hover  li {
-					display:block;
 			}
     </style>
 </head>
