@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
 		<meta charset="UTF-8">
 		<title>Оформление вертикального меню</title>
-		<style>
+        <style>
 			html {
 					background: #f0f0f0;
 			}
 			
-			.menu {
+			.menu { 
+                    padding: 1px 3px 6px 7px;
 					width: 200px;
 					background: #fff;
 			}
 			
 			.menu ul {
-                position:relative;
+                    position:relative;
                     list-style: none;
+				
+			}
+			.menu li {
+                    list-style:none;
 			}
 			
-			.menu li {
-                list-style:none;
-			}
-
 			.menu li:before {
                     left: 22px;
                     width: 4px;
@@ -31,19 +33,27 @@
                     width: 15px;
                     position: absolute;
 			}
-
+			
 			.menu li a {
-                color:#5276a1;
+                    color:#5276a1;
+					
 			}
+			
 			
 			.menu li ul {
-                margin-bottom: 12px;
+                    margin-bottom: 12px;
+					
 			}
 			
-            
-            
-			.menu li li {
-                margin-left: -20px;
+			.menu li li:before {
+                    background-position: 0px -16px;
+                    left: 20px;
+                    margin-left: -20px;
+					
+			}
+			.menu li li { 
+                    margin-left: -20px;
+					
 			}
 	</style>
 </head>
