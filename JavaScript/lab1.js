@@ -3,7 +3,7 @@ function vozrast_pol() {
     let age,gender;
 age = prompt('Сколько вам лет?');
 gender = prompt('Вы мужчина или женщина? (или "1" и "2" соответственно)');
-if ((age>=0 && age <= 17)&&(gender=='мужчина' || (gender=='женщина' && gender=='2'))){
+if ((age>=0 && age <= 17)&&((gender=='мужчина' && gender=='1') || (gender=='женщина' && gender=='2'))){
     alert('Вам работать ещё рано — учитесь!');
 }  else if ((age>=18 && age <= 59) && (gender=='мужчина' && gender=='1')){
     alert('Вам ещё работать и работать!');
