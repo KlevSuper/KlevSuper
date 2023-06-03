@@ -1,0 +1,53 @@
+<html lang="ru">
+<head> <title>Дерево из элементов ul/li</title>
+</head>
+<body>
+  <ul>
+    <li>Животные
+      <ul>
+        <li>Млекопитающие
+          <ul>
+            <li>Коровы</li>
+            <li>Ослы</li>
+            <li>Собаки</li>
+            <li>Тигры</li>
+          </ul>
+        </li>
+        <li>Другие
+          <ul>
+            <li>Змеи</li>
+            <li>Птицы</li>
+            <li>Ящерицы</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Рыбы
+      <ul>
+        <li>Аквариумные
+          <ul>
+            <li>Гуппи</li>
+            <li>Скалярии</li>
+          </ul>
+
+        </li>
+        <li>Морские
+          <ul>
+            <li>Морская форель</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+let lis = document.getElementsByTagName('li');
+for (let i = 0; i < lis.length; i++) {
+  let nestedLis = lis[i].querySelectorAll('li').length;
+  let text = lis[i].firstChild.textContent.trim();
+  let span = document.createElement('span');
+  span.textContent = text + " - " + nestedLis;
+  lis[i].replaceChild(span, lis[i].firstChild);
+}
+  </script>
+</body></html>
