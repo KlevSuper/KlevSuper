@@ -1,5 +1,5 @@
 "use strict";
-function vozrast_pol() {
+function age_and_pol() {
     let age,gender;
 age = prompt('Сколько вам лет?');
 gender = prompt('Вы мужчина или женщина? (или "1" и "2" соответственно)');
