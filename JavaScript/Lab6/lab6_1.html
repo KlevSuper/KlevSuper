@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Текст</title>
+</head>
+<body>
+	<input type="button" id="hider" value="Спрятать текст">
+	<div id="text">Текст</div>
+
+<script>
+	let c=0;
+  	hider.onclick = function() 
+	{
+	if (c==0) {text.innerHTML=" "; c=1;}
+	else {text.innerHTML="Текст"; c=0;}
+	}
+</script>
+</body>
+</html>
