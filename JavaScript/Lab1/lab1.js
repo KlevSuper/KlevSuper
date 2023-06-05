@@ -2,20 +2,20 @@
 function age_and_pol() {
     let age,gender;
 age = prompt('Сколько вам лет?');
-gender = prompt('Вы мужчина или женщина? (или "1" и "2" соответственно)');
-if ((age>=0 && age <= 17)&&((gender=='мужчина' || gender==1) || (gender=='женщина' || gender==2))){
+gender = prompt('Вы мужчина или женщина? (или "м" и "ж" соответственно)');
+if ((age>=0 && age <= 17)&&((gender=='мужчина' || gender=='м') || (gender=='женщина' || gender=='ж'))){
     alert('Вам работать ещё рано — учитесь!');
-}  else if ((age>=18 && age <= 59) && (gender=='мужчина' || gender==1)){
+}  else if ((age>=18 && age <= 59) && (gender=='мужчина' || gender=='м')){
     alert('Вам ещё работать и работать!');
-} else if ((age>=18 && age <= 54) && (gender=='женщина' || gender==2)){
+} else if ((age>=18 && age <= 54) && (gender=='женщина' || gender=='ж')){
     alert('Вам ещё работать и работать!');
-}else if ((age>=60 && age < 65) && (gender=='мужчина' || gender==1)){
+}else if ((age>=60 && age < 65) && (gender=='мужчина' || gender=='м')){
     alert('Скоро пенсия!');
-} else if ((age>=55 && age < 60) && (gender=='женщина' || gender==2)){
+} else if ((age>=55 && age < 60) && (gender=='женщина' || gender=='ж')){
     alert('Скоро пенсия!');
-}  else if (age >= 65 && (gender=='мужчина' || gender==1)){
+}  else if (age >= 65 && (gender=='мужчина' || gender=='м')){
     alert('Вам пора на пенсию!');
-} else if (age >= 60 && (gender=='женщина' || gender==2)){
+} else if (age >= 60 && (gender=='женщина' || gender=='ж')){
     alert('Вам пора на пенсию!');
 }  else if (age == null && gender== null){
     alert('Надо было вводить значения!');
