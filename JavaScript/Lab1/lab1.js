@@ -45,11 +45,9 @@ function crow() {
                 message = `На ветке сидит ${num} ворон`;
                 break;
         }
-
     }
     alert(message);
 }
-
 function onKeydown(event, num) {
     if (event.code === 'Escape') {
         num = null;
@@ -68,7 +66,6 @@ function hundred() {
         onKeydown(event, num);
     });
 }
-
 function simple() {
     let n;
     n = prompt('Введите число большее чем 2');
@@ -81,7 +78,6 @@ function simple() {
     console.log( i );
     }
 }
-
 function catdog() {
     let num = prompt("Введите количество строк: ");
     let k = Math.floor(num / 5);
