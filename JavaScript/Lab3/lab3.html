@@ -6,18 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Числа, строки и массивы</title>
-    <!-- добавим стили mocha для отображения результатов -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-    <!-- добавляем сам фреймворк mocha -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
     <script>
-        // включаем режим тестирования в стиле BDD
+        //* включаем режим тестирования в стиле BDD
         mocha.setup('bdd');
     </script>
-    <!-- добавим chai -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
     <script>
-        // chai предоставляет большое количество функций. Объявим assert глобально
+        //* chai предоставляет большое количество функций. Объявим assert глобально
         let assert = chai.assert;
     </script>
 </head>
@@ -137,7 +134,7 @@
     <!-- элемент с id="mocha" будет содержать результаты тестов -->
     <div id="mocha"></div>
 
-    <!-- запускаем тесты! -->
+    <!-- запускаем  -->
     <script>
         window.onload = () => mocha.run();
     </script>
