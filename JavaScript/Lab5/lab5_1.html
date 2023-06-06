@@ -1,17 +1,23 @@
+<!DOCTYPE html>
 <html lang="ru">
-<head> <title>head, ul, li</title>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
 </head>
 <body>
-	<div>Пользователи</div>
+	<div>Пользователи:</div>
 	<ul>
 		<li>Маша</li>
 		<li>Вовочка</li>
 	</ul>
-
+	<!-- комментарий -->
 	<script>
-	let head = document.getElementsByTagName('head')[0];
-	let ul = document.getElementsByTagName('ul')[0];
-	let li = document.getElementsByTagName('li');
+    const head = document.head;
+    const ul = document.querySelector('ul');
+    const liList = ul.querySelectorAll('li');
+    console.log(head)
+    console.log(ul)
+    console.log(liList)
 	</script>
 </body>
-</body></html>
+</html>
