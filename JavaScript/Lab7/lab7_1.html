@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<body>
+    <select id = "music">
+        <option value="Rock">Рок</option>
+        <option value="Blues" selected>Блюз</option>
+        </select>
+
+    <script>
+        // Вывести значение и текст текущей выбранной опции.
+        let selectedOption = music.options[music.selectedIndex];
+        console.log( music.options[music.selectedIndex] );
+        console.log( selectedOption.value );
+        console.log( selectedOption.text );
+
+        // Добавьте опцию: <option value="Classic">Классика</option>.
+        let newOption = new Option("Классика", "Classic");
+        music.append(newOption);
+
+        // Сделайте её выбранной.
+        newOption.selected = true;
+
+    </script>
+</body>
+</html>
