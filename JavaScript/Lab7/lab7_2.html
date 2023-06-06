@@ -2,47 +2,47 @@
 <html lang="ru">
 
 <head>
-<meta charset="UTF-8">
-<title> data-placeholder</title>
-<style>
-.placeholder::-webkit-input-placeholder {
-color: rgb(58, 85, 241);
-}
+	<meta charset="UTF-8">
+	<title> data-placeholder</title>
+	<style>
+		.placeholder::-webkit-input-placeholder {
+			color: rgb(58, 85, 241);
+		}
 
-div {
-color: rgb(58, 85, 241);
-}
+		div {
+			color: rgb(58, 85, 241);
+		}
 
-.data-placeholder{
-	color: rgb(58, 85, 241);
-}
-</style>
+		.data-placeholder {
+			color: rgb(58, 85, 241);
+		}
+	</style>
 </head>
 
 <body>
 
-<div></div>
-<input type="text" class='data-placeholder' data-placeholder="Введите текст">
+	<div></div>
+	<input type="text" class='data-placeholder' data-placeholder="Введите текст">
 
-<script>
-let input = document.querySelector('input[data-placeholder]');
-let div = document.querySelector('div');
-//Добавляем плейсхолдер
-input.value = input.getAttribute('data-placeholder');
+	<script>
+		let input = document.querySelector('input[data-placeholder]');
+		let div = document.querySelector('div');
+		//Добавляем плейсхолдер
+		input.value = input.getAttribute('data-placeholder');
 
-input.onfocus = function () {
-div.innerHTML = input.getAttribute('data-placeholder');
-input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
-input.value = '';
-};
+		input.onfocus = function () {
+			div.innerHTML = input.getAttribute('data-placeholder');
+			input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
+			input.value = '';
+		};
 
-input.onblur = function () {
-input.setAttribute('data-placeholder', div.innerHTML);
-div.innerHTML = '';//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
-input.value = input.getAttribute('data-placeholder');
-};
+		input.onblur = function () {
+			input.setAttribute('data-placeholder', div.innerHTML);
+			div.innerHTML = '';//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
+			input.value = input.getAttribute('data-placeholder');
+		};
 
-</script>
+	</script>
 
 
 </body>
