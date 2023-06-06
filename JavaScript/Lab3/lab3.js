@@ -1,7 +1,6 @@
 import {
   fib
 } from 'JavaScript/Lab3/lab2.js';
-
 export function getDecimal(num) {
   if (Math.trunc(num) == num) {
       return 0;
@@ -13,22 +12,18 @@ export function getDecimal(num) {
       return +(num - Math.trunc(num)).toFixed(2);
   }
 }
-
 export function ucFirst(str){
   if (!str) return str;
       return str[0].toUpperCase() + str.slice(1);
 }
-
 export function checkSpam(str){
   let lowerStr = str.toLowerCase();
 return lowerStr.includes('viagra') || lowerStr.includes('xxx');
 }
-
 export function  truncate(str, maxlength){
   return (str.length > maxlength) ?
   str.slice(0, maxlength - 1) + '…' : str;
 }
-
 export function  camelize(str){
   let STR = str.split("-");
   let StrNew = "";
@@ -38,19 +33,16 @@ export function  camelize(str){
   }
   return StrNew;
 }
-
 export function  fibs(n){
   let arr = [];
   for (let i = 0; i < n; i++) arr.push(fib(i));
   return arr;
 }
-
 export function  arrReverseSorted(arr){
   return arr.sort(function (a, b) {
       return b - a;
   })
 }
-
 export function  unique(arr){
   return Array.from(new Set(arr));
 }
