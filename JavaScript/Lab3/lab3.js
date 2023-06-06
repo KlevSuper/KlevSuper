@@ -1,6 +1,6 @@
 import {
   fib
-} from './lab2.js';
+} from 'JavaScript/Lab3/lab2.js';
 
 export function getDecimal(num) {
   if (Math.trunc(num) == num) {
