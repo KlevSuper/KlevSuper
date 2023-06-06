@@ -80,7 +80,7 @@ export function  fibs(n){
  * @return {Arr} arr, массив, отсортированный по убыванию.
  */
 export function arrReverseSorted(arr) {
-    let arr1 = arr
+    let arr1 = Array.from(arr)
     return arr1.sort(function (a, b) {
         return b - a;
         return arr;
