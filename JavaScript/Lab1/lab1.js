@@ -17,7 +17,7 @@ if ((age>=0 && age <= 17)&&((gender=='мужчина' || gender=='м') || (gende
     alert('Вам пора на пенсию!');
 } else if (age >= 60 && (gender=='женщина' || gender=='ж')){
     alert('Вам пора на пенсию!');
-}  else if (age == null && gender== null){
+}  else if (age = null && gender = null){
     alert('Надо было вводить значения!');
 }else {
     alert('Да кто ты такой?')
