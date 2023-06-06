@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zadanie 3</title>
+  </head>
+  <body>
+    <div id="content" contenteditable="true">This is editable content. Press Ctrl+E to edit.</div>
+    <script>
+      const contentDiv = document.getElementById('content');
+      let isEditMode = false;
+      let originalContent = '';
+
+      // Listen for Ctrl+E to enter edit mode
+      document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.key === 'e') {
+          // Save original content and enter edit mode
+          originalContent = contentDiv.innerHTML;
+          contentDiv.innerHTML = '<textarea>' + originalContent + '</textarea>';
+          isEditMode = true;
+        }
+      });
+
+      // Listen for Ctrl+S to save changes and exit edit mode
+      document.addEventListener('keydown', function(event) {
+        if (isEditMode && event.ctrlKey && event.key === 's') {
+          // Save changes and exit edit mode
+          const textarea = contentDiv.querySelector('textarea');
+          contentDiv.innerHTML = textarea.value;
+          isEditMode = false;
+        }
+      });
+
+      // Listen for Esc to cancel changes and exit edit mode
+      document.addEventListener('keydown', function(event) {
+        if (isEditMode && event.key === 'Escape') {
+          // Cancel changes and exit edit mode
+          contentDiv.innerHTML = originalContent;
+          isEditMode = false;
+        }
+      });
+    </script>
+  </body>
+</html>
