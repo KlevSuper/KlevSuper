@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания 7</title>
+</head>
+<body>
+    <script>
+    "use strict"
+function formatDate(date) {
+let day = date.getDate().toString().padStart(2,'0');
+let month = (date.getMonth() + 1).toString().padStart(2, '0');
+let year = date.getFullYear().toString().slice(-2);
+return `${day}.${month}.${year}`;
+}
+console.log(formatDate(new Date()));
+    </script>
+</body>
+</html>
