@@ -257,12 +257,6 @@
         </table>
         <script>
 
-            var table = document.body.children[0];
-            for (var i = 1; i < (table.rows.length) - 1; i++) {
-                for (var j = 2 - i % 2; j < (table.rows.length) - 1; j += 2) {
-                    table.rows[i].cells[j].style.backgroundColor = '#ffce9e';
-                }
-            }
             var table1 = document.body.children[0];
             for (var j = 1; j < (table1.rows.length) - 1; j++) {
                 for (var i = 1 + j % 2; i < (table1.rows.length) - 1; i += 2) {
