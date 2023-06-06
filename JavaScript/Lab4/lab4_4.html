@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Объекты, дата и время Задание 4</title>
 </head>
+
 <body>
     <script>
-    "use strict"
-let obj = {
-    className: 'open menu'
-}
-
-obj.addClass = function addClass(cls) {
-    let arr = this.className.split(" ");
-    if (!arr.includes(cls)) {
-        arr.push(cls)
-    }
-    this.className = arr.join(" ");// присваеваем свойству объекта, новый список классов.
-}
-
-obj.addClass('NEW'); // open menu new
-obj.addClass(':-)'); // open menu new )
-obj.addClass('open');  // без изменений 
-
-console.log(obj.className);
-
-obj.removeClass = function removeClass(cls) {
-    let arr = this.className.split(" ");
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == cls) {
-            arr.splice(i, 1);
-            i--;
+        "use strict"
+        let obj = {
+            className: 'open menu'
         }
-    }
-    obj.className = arr.join(' ');
-}
 
-obj.removeClass(':-('); // без изменений
-obj.removeClass('NEW'); // open menu )
-obj.removeClass('open'); // menu )
+        obj.addClass = function addClass(cls) {
+            let arr = this.className.split(" ");
+            if (!arr.includes(cls)) {
+                arr.push(cls)
+            }
+            this.className = arr.join(" ");// присваеваем свойству объекта, новый список классов.
+        }
+        return this;
 
-console.log(obj.className);
+        obj.addClass('NEW'); // open menu new
+        obj.addClass(':-)'); // open menu new )
+        obj.addClass('open');  // без изменений 
+
+        console.log(obj.className);
+
+        obj.removeClass = function removeClass(cls) {
+            let arr = this.className.split(" ");
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == cls) {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+            obj.className = arr.join(' ');
+
+        }
+
+        obj.removeClass(':-('); // без изменений
+        obj.removeClass('NEW'); // open menu )
+        obj.removeClass('open'); // menu )
+
+        console.log(obj.className);
     </script>
 </body>
+
 </html>
