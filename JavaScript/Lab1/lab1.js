@@ -60,12 +60,13 @@ function hundred() {
         num = prompt('Введите число большее 100');
         if (num === null) return; // выход из функции, если нажали "Отмена"
         if (num === '') continue; // продолжаем цикл, если введена пустая строка
-    } while (num <= 100);
+    } while (num <= 100 || ( isNaN(num)));
     alert(num);
     document.addEventListener('keydown', function (event) {
         onKeydown(event, num);
     });
 }
+
 function simple() {
     let n;
     n = prompt('Введите число большее чем 2');
