@@ -2,7 +2,7 @@
 
 import {
     fib
-} from './lab_2.js';
+} from './lab2.js';
 
 /**
  * Возвращает дробную часть числа num.
