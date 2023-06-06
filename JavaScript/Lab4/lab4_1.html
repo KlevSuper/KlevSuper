@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания 1-3</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+function isEmpty(obj) {
+    return obj.hasOwnProperty()
+}
+let book1 = {
+    title: "Воин пяти Поднебесных: Пророчество",
+    pubYear: 2023,
+    price: 735,
+    show: function () {
+        console.log(this.title);
+        console.log(this.price);
+    }
+};  // синтаксис "литерал объекта"
+
+console.log(isEmpty(book1));
+
+let book2 = new Object();
+book2.title = 'Основатель Тёмного Пути';
+book2.pubYear = 2023;
+book2.price = 1050;
+
+for (let i in book2) console.log(book2[i]);
+console.log(isEmpty(book2));
+
+function showBook() {
+     console.log(this.title);
+     console.log(this.price);
+}
+
+book1.show();
+
+book2.show=showBook;
+
+book2.show();
+    </script>
+</body>
+</html>
