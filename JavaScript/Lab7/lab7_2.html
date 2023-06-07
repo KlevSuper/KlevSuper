@@ -2,53 +2,55 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title> data-placeholder</title>
-	<style>
-		div {
-			color: rgb(58, 85, 241);
-		}
+<meta charset="UTF-8">
+<title> data-placeholder</title>
+<style>
 
-		.placeholder {
-			color: rgb(58, 85, 241);
-		}
+div {
+color: rgb(58, 85, 241);
+}
 
-		.data-placeholder {
-			color: rgb(58, 85, 241);
-		}
-	</style>
+
+::placeholder {
+		color: rgb(58, 85, 241);
+	}
+	.data-placeholder{
+	color: rgb(58, 85, 241);
+}
+</style>
 </head>
 
 <body>
+	
 	<div id="texfield">
-		<label for="123">Введите текст...</label>
-		<input id="123" type="text" data-placeholder="Введите текст" class="data-placeholder" >
-	</div>
+        <label for="123"></label>
+        <input id="123" type="text" class="data-placeholder" data-placeholder="Введите текст" >
+    </div>
 
-	<script>
-		'use strict';
-		let tf = document.getElementById("texfield");
+<script>
+'use strict';
+        let tf = document.getElementById("texfield");
 
-		let input = tf.getElementsByTagName("input")[0];
-		let lb = tf.getElementsByTagName("label")[0];
-		lb.style.display = "none";
+        let input = tf.getElementsByTagName("input")[0];
+        let lb = tf.getElementsByTagName("label")[0];
+        lb.style.display = "none";
 
-		input.setAttribute("data-placeholder", input.dataset.placeholder);
-		lb.innerHTML = input.dataset.placeholder;
+        input.setAttribute("data-placeholder", input.dataset.placeholder);
+        lb.innerHTML = input.dataset.placeholder;
 
-		input.addEventListener("focus", function () {
-			lb.style.display = "block";
-			input.setAttribute("placeholder", "");
-		});
+        input.addEventListener("focus", function () {
+            lb.style.display = "block";
+            input.setAttribute("data-placeholder", "");
+        });
 
-		input.addEventListener("blur", function () {
+        input.addEventListener("blur", function () {
 
-			lb.style.display = "none";
-			input.setAttribute("placeholder", input.dataset.placeholder);
+            lb.style.display = "none";
+            input.setAttribute("data-placeholder", input.dataset.placeholder);
 
-		});
+        });
 
-	</script>
+</script>
 
 
 </body>
