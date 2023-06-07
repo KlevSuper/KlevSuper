@@ -2,47 +2,53 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title> data-placeholder</title>
-	<style>
-		.placeholder {
-			color: rgb(39, 66, 219);
-		}
+<meta charset="UTF-8">
+<title> placeholder</title>
+<style>
+.placeholder::-webkit-input-placeholder {
+color: rgb(58, 85, 241);
+}
 
-		div {
-			color: rgb(39, 66, 219);
-		}
+div {
+color: rgb(58, 85, 241);
+}
 
-		.data-placeholder {
-			color: rgb(39, 66, 219);
-		}
-	</style>
+.placeholder{
+	color: rgb(58, 85, 241);
+}
+</style>
 </head>
 
 <body>
 	<div id="texfield">
-		<label for=""></label>
-		<input type="text" data-placeholder="Введите текст" />
-	</div>
-	<script>
-		let input = document.querySelector('input[placeholder]');
-		let div = document.querySelector('div');
-		//Добавляем плейсхолдер
-		input.value = input.getAttribute('placeholder');
+        <label for="sss"></label>
+        <input type="text" data-placeholder="Введите текст" >
+    </div>
 
-		input.onfocus = function () {
-			div.innerHTML = input.getAttribute('placeholder');
-			input.setAttribute('placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
-			input.value = '';
-		};
+<script>
+'use strict';
+        let tf = document.getElementById("texfield");
 
-		input.onblur = function () {
-			input.setAttribute('placeholder', div.innerHTML);
-			div.innerHTML = '';//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
-			input.value = input.getAttribute('placeholder');
-		};
+        let input = tf.getElementsByTagName("input")[0];
+        let lb = tf.getElementsByTagName("label")[0];
+        lb.style.display = "none";
 
-	</script>
+        input.setAttribute("placeholder", input.dataset.placeholder);
+        lb.innerHTML = input.dataset.placeholder;
+
+        input.addEventListener("focus", function () {
+            lb.style.display = "block";
+            input.setAttribute("placeholder", "");
+        });
+
+        input.addEventListener("blur", function () {
+
+            lb.style.display = "none";
+            input.setAttribute("placeholder", input.dataset.placeholder);
+
+        });
+
+</script>
 
 
 </body>
