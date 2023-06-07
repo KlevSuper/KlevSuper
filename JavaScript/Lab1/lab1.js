@@ -17,7 +17,7 @@ function age_and_pol() {
         alert('Вам пора на пенсию!');
     } else if (age >= 60 && (gender == 'женщина' || gender == 'ж')) {
         alert('Вам пора на пенсию!');
-    } else if (age == null && gender == null) {
+    } else if ((age == null && gender == null) || (age == '' && gender == '') ) {
         alert('Надо было вводить значения!');
     } else {
         alert('Да кто ты такой?')
