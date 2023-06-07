@@ -2,36 +2,40 @@
 <html>
 
 <head>
-	<title>Ctrl + E</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ctrl+E</title>
 </head>
 
 <body>
-	<div id="editable-div" contenteditable="true">Ctrl+E</div>
+	<textarea id="area" autofocus></textarea>
+	<div id="divv"><cite>Введи текст</cite></div>
 
 	<script>
-		const editableDiv = document.getElementById('editable-div');
-		let isEditing = false;
-		let originalContent = '';
+		"use strict";
+		area.hidden = true;
 
-		document.addEventListener('keydown', function (event) {
-			if (event.ctrlKey && event.key === 'e' && !isEditing) {
-				event.preventDefault();
-				isEditing = true;
-				originalContent = editableDiv.innerHTML;
-				editableDiv.innerHTML = '<textarea id="editable-textarea">' + originalContent + '</textarea>';
-				const textarea = document.getElementById('editable-textarea');
-				textarea.focus();
-			} else if (event.ctrlKey && event.key === 's' && isEditing) {
-				event.preventDefault();
-				const textarea = document.getElementById('editable-textarea');
-				editableDiv.innerHTML = textarea.value;
-				isEditing = false;
-			} else if (event.key === 'Escape' && isEditing) {
-				event.preventDefault();
-				editableDiv.innerHTML = originalContent;
-				isEditing = false;
+		document.onkeydown = function (e) {
+			if (e.ctrlKey && e.keyCode == '69') {
+				divv.hidden = true;
+				area.hidden = false;
+				area.focus()
+				area.innerHTML = divv.innerHTML;
+				return false;
 			}
-		});
+
+			if (e.ctrlKey && e.keyCode == '83') {
+				divv.hidden = false;
+				area.hidden = true;
+				divv.innerHTML = area.value;
+				return false;
+			} else if (e.keyCode == '27') {
+				divv.hidden = false;
+				area.hidden = true;
+			}
+		};
+
 	</script>
 </body>
 
