@@ -33,7 +33,7 @@
 		let lb = tf.getElementsByTagName("label")[0];
 		lb.style.display = "none";
 
-		input.setAttribute("placeholder", input.dataset.placeholder);
+		input.setAttribute("data-placeholder", input.dataset.placeholder);
 		lb.innerHTML = input.dataset.placeholder;
 
 		input.addEventListener("focus", function () {
