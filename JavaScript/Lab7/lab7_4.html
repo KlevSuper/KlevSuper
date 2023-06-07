@@ -1,37 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+
 <head>
- <meta charset="UTF-8">
- <title>Placeholder</title>
- <style>
-  .placeholder {
-   color: blue;
-  }
- </style>
+<meta charset="UTF-8">
+<title> placeholder</title>
+<style>
+
+div {
+color: rgb(58, 85, 241);
+}
+
+
+::placeholder {
+		color: rgb(73, 73, 252);
+	}
+</style>
 </head>
+
 <body>
- <label for="input"></label>
- <input type="text" id="input" data-placeholder="Введите текст">
- <script>
-  let input = document.getElementById('input');
-  let placeholder = input.getAttribute('data-placeholder');
-  
-  input.value = placeholder;
-  input.classList.add('placeholder');
+	
+	<div id="texfield">
+        <label for="123">Введите текст:</label>
+        <input id="123" type="text" class="data-placeholder" placeholder="Введите текст" >
+    </div>
 
-  input.addEventListener('focus', function() {
-   if (this.value === placeholder) {
-    this.value = '';
-    this.classList.remove('placeholder');
-   }
-  });
+<script>
+'use strict';
+        let tf = document.getElementById("texfield");
 
-  input.addEventListener('blur', function() {
-   if (this.value === '') {
-    this.value = placeholder;
-    this.classList.add('placeholder');
-   }
-  });
- </script>
+        let input = tf.getElementsByTagName("input")[0];
+        let lb = tf.getElementsByTagName("label")[0];
+        lb.style.display = "none";
+
+        input.setAttribute("placeholder", input.dataset.placeholder);
+        lb.innerHTML = input.dataset.placeholder;
+
+        input.addEventListener("focus", function () {
+            lb.style.display = "block";
+            input.setAttribute("placeholder", "");
+        });
+
+        input.addEventListener("blur", function () {
+
+            lb.style.display = "none";
+            input.setAttribute("placeholder", input.dataset.placeholder);
+
+        });
+
+</script>
+
+
 </body>
+
 </html>
