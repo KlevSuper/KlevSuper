@@ -2,33 +2,33 @@
 <html lang="ru">
 
 <head>
-<meta charset="UTF-8">
-<title> data-placeholder</title>
-<style>
+    <meta charset="UTF-8">
+    <title> data-placeholder</title>
+    <style>
+        div {
+            color: rgb(58, 85, 241);
+        }
 
-div {
-color: rgb(58, 85, 241);
-}
 
+        .placeholder {
+            color: rgb(58, 85, 241);
+        }
 
-::placeholder {
-		color: rgb(58, 85, 241);
-	}
-	.data-placeholder{
-	color: rgb(58, 85, 241);
-}
-</style>
+        .data-placeholder {
+            color: rgb(58, 85, 241);
+        }
+    </style>
 </head>
 
 <body>
-	
-	<div id="texfield">
+
+    <div id="texfield">
         <label for="123"></label>
-        <input id="123" type="text" class="placeholder" data-placeholder="Введите текст" >
+        <input id="123" type="text" class="placeholder" data-placeholder="Введите текст">
     </div>
 
-<script>
-'use strict';
+    <script>
+        'use strict';
         let tf = document.getElementById("texfield");
 
         let input = tf.getElementsByTagName("input")[0];
@@ -50,7 +50,7 @@ color: rgb(58, 85, 241);
 
         });
 
-</script>
+    </script>
 
 
 </body>
