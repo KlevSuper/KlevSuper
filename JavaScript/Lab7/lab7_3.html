@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- <title>Ctrl + E</title>
+	<title>Ctrl + E</title>
 </head>
+
 <body>
- <div id="editable-div" contenteditable="true">Нажмите Ctrl+E, чтобы редактировать</div>
+	<div id="editable-div" contenteditable="true">Нажмите Ctrl+E, чтобы редактировать</div>
 
- <script>
-  const editableDiv = document.getElementById('editable-div');
-  let isEditing = false;
-  let originalContent = '';
+	<script>
+		const editableDiv = document.getElementById('editable-div');
+		let isEditing = false;
+		let originalContent = '';
 
-  document.addEventListener('keydown', function(event) {
-   if (event.ctrlKey && event.key === 'e' && !isEditing) {
-    event.preventDefault();
-    isEditing = true;
-    originalContent = editableDiv.innerHTML;
-    editableDiv.innerHTML = '<textarea id="editable-textarea">' + originalContent + '</textarea>';
-    const textarea = document.getElementById('editable-textarea');
-    textarea.focus();
-   } else if (event.ctrlKey && event.key === 's' && isEditing) {
-    event.preventDefault();
-    const textarea = document.getElementById('editable-textarea');
-    editableDiv.innerHTML = textarea.value;
-    isEditing = false;
-   } else if (event.key === 'Escape' && isEditing) {
-    event.preventDefault();
-    editableDiv.innerHTML = originalContent;
-    isEditing = false;
-   }
-  });
- </script>
+		document.addEventListener('keydown', function (event) {
+			if (event.ctrlKey && event.key === 'e' && !isEditing) {
+				event.preventDefault();
+				isEditing = true;
+				originalContent = editableDiv.innerHTML;
+				editableDiv.innerHTML = '<textarea id="editable-textarea">' + originalContent + '</textarea>';
+				const textarea = document.getElementById('editable-textarea');
+				textarea.focus();
+			} else if (event.ctrlKey && event.key === 's' && isEditing) {
+				event.preventDefault();
+				const textarea = document.getElementById('editable-textarea');
+				editableDiv.innerHTML = textarea.value;
+				isEditing = false;
+			} else if (event.key === 'Escape' && isEditing) {
+				event.preventDefault();
+				editableDiv.innerHTML = originalContent;
+				isEditing = false;
+			}
+		});
+	</script>
 </body>
+
 </html>
