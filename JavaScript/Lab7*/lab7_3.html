@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>textarea</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctrl+E</title>
 </head>
 
 <body>
-    <div>Место для записи</div>
+    <textarea id="area" autofocus></textarea>
+    <div id="divv">Ctrl+E</div>
+
 
     <script>
-        'use strict';
-        let text;
-        document.addEventListener('keydown', function (event) {
-            if (event.code == 'KeyE' && (event.ctrlKey || event.metaKey)) {
-                event.preventDefault();
-                let textarea = document.createElement("textarea");
-                let div = document.querySelector("div");
-                text = div.innerHTML;
-                textarea.value = div.innerHTML;
-                div.parentNode.replaceChild(textarea, div);
-                textarea.focus();
+        "use strict";
+        area.hidden = true;
+        /**
+        * Проверка нажатия клавиш
+        *
+        * @param {} нажатая клавиша.
+        * @return {} превращения div 
+        */
+        document.onkeydown = function (e) {
+            if (e.ctrlKey && e.keyCode == '69') {
+                divv.hidden = true;
+                area.hidden = false;
+                area.focus()
+                area.innerHTML = divv.innerHTML;
+                return false;
             }
-            else if (event.code == 'KeyS' && (event.ctrlKey || event.metaKey)) {
-                event.preventDefault();
-                let textarea = document.querySelector("textarea");
-                let div = document.createElement("div");
-                div.innerHTML = textarea.value;
-                textarea.parentNode.replaceChild(div, textarea);
+
+            if (e.ctrlKey && e.keyCode == '83') {
+                divv.hidden = false;
+                area.hidden = true;
+                divv.innerHTML = area.value;
+                return false;
+            } else if (e.keyCode == '27') {
+                divv.hidden = false;
+                area.hidden = true;
             }
-            else if (event.code == 'Escape') {
-                event.preventDefault();
-                let textarea = document.querySelector("textarea");
-                let div = document.createElement("div");
-                if (text)
-                    div.innerHTML = text;
-                textarea.parentNode.replaceChild(div, textarea);
-            }
-        });
+        };
 
     </script>
 </body>
