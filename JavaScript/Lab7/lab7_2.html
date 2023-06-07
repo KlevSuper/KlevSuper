@@ -25,13 +25,13 @@
 	<input type="text" class='placeholder' placeholder="Введите текст">
 
 	<script>
-		let input = document.querySelector('input[data-placeholder]');
+		let input = document.querySelector('input[placeholder]');
 		let div = document.querySelector('div');
 		//Добавляем плейсхолдер
 		input.value = input.getAttribute('data-placeholder');
 
 		input.onfocus = function () {
-			div.innerHTML = input.getAttribute('data-placeholder');
+			div.innerHTML = input.getAttribute('placeholder');
 			input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
 			input.value = '';
 		};
