@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<title> data-placeholder</title>
 	<style>
-		  .placeholder {
-   color: rgb(39, 66, 219);
-  }
+		.placeholder {
+			color: rgb(39, 66, 219);
+		}
 
 		div {
 			color: rgb(39, 66, 219);
@@ -20,26 +20,26 @@
 </head>
 
 <body>
-
-	<label for="input"></label>
-	<input type="text" class='placeholder' placeholder="Введите текст">
-
+	<div id="texfield">
+		<label for="sss"></label>
+		<input type="text" data-placeholder="Введите текст" />
+	</div>
 	<script>
 		let input = document.querySelector('input[placeholder]');
 		let div = document.querySelector('div');
 		//Добавляем плейсхолдер
-		input.value = input.getAttribute('data-placeholder');
+		input.value = input.getAttribute('placeholder');
 
 		input.onfocus = function () {
 			div.innerHTML = input.getAttribute('placeholder');
-			input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
+			input.setAttribute('placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
 			input.value = '';
 		};
 
 		input.onblur = function () {
-			input.setAttribute('data-placeholder', div.innerHTML);
+			input.setAttribute('placeholder', div.innerHTML);
 			div.innerHTML = '';//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
-			input.value = input.getAttribute('data-placeholder');
+			input.value = input.getAttribute('placeholder');
 		};
 
 	</script>
